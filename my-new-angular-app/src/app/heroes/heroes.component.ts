@@ -10,14 +10,12 @@ import { HEROES } from '../mock-heroes';
 export class HeroesComponent implements OnInit {
   heroes = HEROES;
   doubleClick: Hero;
-  
   selectedHero: Hero;
 
   onSelect(hero: Hero): void {
-    if(this.selectedHero != hero) {
+    if (this.selectedHero !== hero) {
       this.selectedHero = hero;
-    }
-    else {
+    } else {
       this.doubleClick = hero;
     }
 }
